@@ -33,9 +33,9 @@ android {
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -54,6 +54,10 @@ repositories {
   mavenCentral()
   jcenter()
   google()
+
+  maven {
+    url "https://storage.googleapis.com/berbix-mobile-releases/repo"
+  }
 
   def found = false
   def defaultDir = null
@@ -127,4 +131,7 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  implementation 'com.berbix:berbixverify:1.1.4'
+  implementation 'com.google.code.gson:gson:2.8.5'
 }

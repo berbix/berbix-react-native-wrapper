@@ -31,6 +31,10 @@ allprojects {
             url("$rootDir/../node_modules/jsc-android/dist")
         }
 
+        maven {
+            url "https://storage.googleapis.com/berbix-mobile-releases/repo"
+        }
+
         google()
         jcenter()
         maven { url 'https://www.jitpack.io' }

@@ -31,10 +31,7 @@ export default function App() {
     try {
       await BerbixSdk.startSDK();
     } catch (err) {
-      console.log(err.domain);
-      console.log(err.code);
-      console.log(err.userInfo);
-      setError(err.domain);
+      setError(err.message || err.domain);
     }
   };
 
