@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "react-native-berbix-sdk": {
+      "signature": "a412b9740e12d5cfd0f633f54c5e044c",
+      "file": true
+    }
+  }
+}
