@@ -31,7 +31,7 @@ export default function App() {
     try {
       await BerbixSdk.startSDK();
     } catch (err) {
-      setError(err.message || err.domain);
+      setError(err.domain || err.message);
     }
   };
 

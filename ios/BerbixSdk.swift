@@ -5,7 +5,7 @@ import Berbix
 class BerbixSdk: UIViewController, BerbixFlowDelegate {
 
     @objc(startSDK:withRejecter:)
-    func startSDK(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+    func startSDK(resolve:@escaping RCTPromiseResolveBlock,reject:@escaping RCTPromiseRejectBlock) -> Void {
         let berbixSDK = BerbixSDK()
         let config = BerbixConfigurationBuilder()
             .withClientToken("client_token_for_session")
@@ -13,7 +13,8 @@ class BerbixSdk: UIViewController, BerbixFlowDelegate {
 
         DispatchQueue.main.async {
             let rootViewController: UIViewController =  (UIApplication.shared.windows.first?.rootViewController)!
-            berbixSDK.startFlow(rootViewController, delegate: self, config: config)
+            let delegate = FlowDelegate(resolve: resolve, reject: reject)
+            berbixSDK.startFlow(rootViewController, delegate: delegate, config: config)
         }
 
 
