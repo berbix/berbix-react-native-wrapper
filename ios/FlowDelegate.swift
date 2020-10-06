@@ -22,7 +22,7 @@ class FlowDelegate: NSObject, BerbixFlowDelegate {
     func completed() {
         self.resolve(true);
     }
-        
+    
     func failed(error: BerbixError) {
         switch error {
         case .apiError(let err as NSError):
@@ -33,7 +33,7 @@ class FlowDelegate: NSObject, BerbixFlowDelegate {
             return self.reject("berbix_error", "invalid_state_error", NSError(domain: "berbix_error", code: 3, userInfo: ["NSLocalizedUserDescription": err ]))
         case .userExitError:
             return self.reject("berbix_error", "user_exit_error", error)
-
+            
         default: return self.reject("berbix_error", "unknown_error", error)
         }
     }

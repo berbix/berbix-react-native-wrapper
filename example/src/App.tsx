@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import BerbixSdk from 'react-native-berbix';
+import BerbixSdk, { BerbixEnvironment } from 'react-native-berbix';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,9 +27,13 @@ const styles = StyleSheet.create({
 export default function App() {
   const [error, setError] = React.useState(null);
 
-  const startSdk = async () => {
+  const startFlow = async () => {
     try {
-      await BerbixSdk.startSDK();
+      const config = {
+        clientToken: 'test',
+        environment: BerbixEnvironment.staging,
+      };
+      await BerbixSdk.startFlow(config);
     } catch (err) {
       setError(err.domain || err.message);
     }
@@ -39,7 +43,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to Berbix rn sdk</Text>
       <Text style={styles.instructions}>Press Launch to get started</Text>
-      <Button title="Launch" onPress={startSdk} />
+      <Button title="Launch" onPress={startFlow} />
 
       {error && <Text style={styles.error}>{error}</Text>}
     </View>

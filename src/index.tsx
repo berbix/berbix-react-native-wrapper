@@ -1,7 +1,22 @@
 import { NativeModules } from 'react-native';
 
+export enum BerbixEnvironment {
+  development,
+  sandbox,
+  staging,
+  production,
+}
+
+type BerbixConfiguration = {
+  clientToken: string;
+  baseUrl?: string;
+  environment?: BerbixEnvironment;
+};
+
 type BerbixSdkType = {
-  startSDK(): Promise<number>;
+  startFlow(config: BerbixConfiguration): Promise<void>;
+  createSession(config: BerbixConfiguration): Promise<void>;
+  display(): Promise<void>;
 };
 
 const { BerbixSdk } = NativeModules;
