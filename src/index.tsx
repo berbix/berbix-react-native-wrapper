@@ -16,7 +16,7 @@ type BerbixConfiguration = {
 type BerbixSdkType = {
   startFlow(config: BerbixConfiguration): Promise<void>;
   createSession(config: BerbixConfiguration): Promise<void>;
-  display(): Promise<void>;
+  displayFlow(): Promise<void>;
 };
 
 const { BerbixSdk } = NativeModules;

@@ -8,4 +8,13 @@ RCT_EXTERN_METHOD(startFlow:(NSDictionary *)config
                   withRejecter:(RCTPromiseRejectBlock)reject
                   )
 
+RCT_EXTERN_METHOD(createSession:(NSDictionary *)config
+                  withResolver:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject
+                  )
+
+RCT_EXTERN_METHOD(displayFlow:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject
+                  )
+
 @end
