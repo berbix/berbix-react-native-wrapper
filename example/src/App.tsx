@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import BerbixSdk from 'react-native-berbix-sdk';
+import BerbixSdk from 'react-native-berbix';
 
 const styles = StyleSheet.create({
   container: {

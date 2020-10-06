@@ -1,5 +1,5 @@
 {
-  "name": "react-native-berbix-sdk",
+  "name": "react-native-berbix",
   "version": "0.1.0",
   "description": "React native berbix sdk",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-berbix-sdk.podspec",
+    "react-native-berbix.podspec",
     "!lib/typescript/example",
     "!**/__tests__",
     "!**/__fixtures__",
@@ -34,13 +34,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://bitbucket.org/mihaichifor/react-native-berbix-sdk",
+  "repository": "https://github.com/MCROEngineering/react-native-berbix",
   "author": "Mihai Chifor <mihai.chifor@mcro.tech> (https://mcro.tech)",
   "license": "MIT",
   "bugs": {
-    "url": "https://bitbucket.org/mihaichifor/react-native-berbix-sdk/issues"
+    "url": "https://github.com/MCROEngineering/react-native-berbix/issues"
   },
-  "homepage": "https://bitbucket.org/mihaichifor/react-native-berbix-sdk#readme",
+  "homepage": "https://github.com/MCROEngineering/react-native-berbix#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",

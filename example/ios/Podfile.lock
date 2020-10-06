@@ -183,7 +183,7 @@ PODS:
     - React-cxxreact (= 0.62.2)
     - React-jsi (= 0.62.2)
   - React-jsinspector (0.62.2)
-  - "react-native-berbix-sdk (0.1.0+a412b974)":
+  - "react-native-berbix (0.1.0+33ba4585)":
     - Berbix (= 1.0.7)
     - React
   - React-RCTActionSheet (0.62.2):
@@ -264,7 +264,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - react-native-berbix-sdk (from `../node_modules/react-native-berbix-sdk`)
+  - react-native-berbix (from `../node_modules/react-native-berbix`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -313,8 +313,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
-  react-native-berbix-sdk:
-    :path: "../node_modules/react-native-berbix-sdk"
+  react-native-berbix:
+    :path: "../node_modules/react-native-berbix"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -355,7 +355,7 @@ SPEC CHECKSUMS:
   React-jsi: b6dc94a6a12ff98e8877287a0b7620d365201161
   React-jsiexecutor: 1540d1c01bb493ae3124ed83351b1b6a155db7da
   React-jsinspector: 512e560d0e985d0e8c479a54a4e5c147a9c83493
-  react-native-berbix-sdk: a1d0a7bcd32db18382ee1d942bd5d5d279f64663
+  react-native-berbix: 5eb5a5cb19d494e9b5e1585b391b7b772c17887a
   React-RCTActionSheet: f41ea8a811aac770e0cc6e0ad6b270c644ea8b7c
   React-RCTAnimation: 49ab98b1c1ff4445148b72a3d61554138565bad0
   React-RCTBlob: a332773f0ebc413a0ce85942a55b064471587a71
