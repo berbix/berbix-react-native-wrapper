@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, Platform } from 'react-native';
 import BerbixSdk, { BerbixEnvironment } from 'react-native-berbix';
 
 const styles = StyleSheet.create({
@@ -52,7 +52,6 @@ export default function App() {
       await BerbixSdk.createSession(config);
       setSessionCreated(true);
     } catch (err) {
-      console.log(err.userInfo);
       setError(err.domain || err.message);
     }
   };
@@ -64,7 +63,6 @@ export default function App() {
       await BerbixSdk.displayFlow();
       setSessionCreated(true);
     } catch (err) {
-      console.log(err.userInfo);
       setError(err.domain || err.message);
     }
   };
@@ -77,13 +75,17 @@ export default function App() {
       >{`Press "Start Flow" to start Berbix flow automatically after configuration is done`}</Text>
       <Button title="Start Flow" onPress={startFlow} />
 
-      <Text
-        style={styles.instructions}
-      >{`Press "Create session" to start a handled Berbix flow`}</Text>
-      <Button title="Create Session" onPress={createSession} />
-      <Text>{sessionCreated ? 'Session created' : 'No session'}</Text>
+      {Platform.OS === 'ios' && (
+        <>
+          <Text
+            style={styles.instructions}
+          >{`Press "Create session" to start a handled Berbix flow`}</Text>
+          <Button title="Create Session" onPress={createSession} />
+          <Text>{sessionCreated ? 'Session created' : 'No session'}</Text>
 
-      <Button title="Display Flow" onPress={displayFlow} />
+          <Button title="Display Flow" onPress={displayFlow} />
+        </>
+      )}
 
       {error && <Text style={styles.error}>{error}</Text>}
     </View>
