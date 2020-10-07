@@ -15,33 +15,33 @@ class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextB
     return "BerbixSdk"
   }
 
-  // Example method
-  // See https://facebook.github.io/react-native/docs/native-modules-android
   @ReactMethod
-  fun startSDK(promise: Promise) {
-    val token = "your_token_here" // Fetch client token from the backend
+  fun startFlow(config: ReadableMap, promise: Promise) {
+    if (!config.hasKey("clientToken")) {
+      return promise.reject(Error("No client token provided"))
+    }
+
+    val clientToken = config.getString("clientToken") as String
+    val baseUrl: String? = if (config.hasKey("baseUrl")) config.getString("baseUrl") else null
+    val debug: Boolean = if (config.hasKey("debug")) config.getBoolean("debug") else false
 
     val sdk = BerbixSDK()
-    val config = BerbixConfigurationBuilder().
-      setClientToken(token).
-      setDebug(true).
-      build()
+    val berbixConfig = BerbixConfigurationBuilder()
+      .setClientToken(clientToken)
+      .setDebug(debug)
+
+    if (baseUrl != null) {
+      berbixConfig.setBaseURL(baseUrl)
+    }
 
     val activity = reactContext.currentActivity
     val eventListener = BerbixActivityEventListener(promise)
     reactContext.addActivityEventListener(eventListener)
 
-//    val i = Intent(reactContext.currentActivity, BerbixActivity::class.java).apply {
-//      putExtra("config", config)
-//    }
-
-//    reactContext.startActivityForResult(i, BerbixConstants.REQUEST_CODE_BERBIX_FLOW, Bundle())
-
-
     if (activity == null) {
       return promise.reject(Error("no activity found"))
     } else {
-      sdk.startFlow(activity, config)
+      sdk.startFlow(activity, berbixConfig.build())
     }
 
   }

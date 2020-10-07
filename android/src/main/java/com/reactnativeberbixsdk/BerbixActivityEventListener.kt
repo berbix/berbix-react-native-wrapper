@@ -14,7 +14,6 @@ class BerbixActivityEventListener(val promise: Promise): BaseActivityEventListen
 
     super.onActivityResult(activity, requestCode, resultCode, data)
 
-    Log.d("aaaaaaaaaaaaaaa", BerbixResultStatus.getStatus(resultCode).toString())
     if (requestCode == BerbixConstants.REQUEST_CODE_BERBIX_FLOW) {
       when (BerbixResultStatus.getStatus(resultCode)) {
         BerbixResultStatus.SUCCESS -> {
