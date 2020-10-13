@@ -19,9 +19,11 @@ public func buildBerbixConfig(config:NSDictionary) -> BerbixConfiguration {
 
 
 @objc(BerbixSdk)
-class BerbixSdk: UIViewController {
+class BerbixSdk: NSObject {
     
     var sessionHandle: BerbixSessionHandle? = nil;
+    var berbixSDK: BerbixSDK? = nil;
+    var flowDelegate: FlowDelegate? = nil;
     
     @objc(startFlow:withResolver:withRejecter:)
     func startFlow(config: NSDictionary, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) -> Void {
@@ -37,13 +39,15 @@ class BerbixSdk: UIViewController {
     
     @objc(createSession:withResolver:withRejecter:)
     func createSession(config: NSDictionary, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) -> Void {
-        let berbixSDK = BerbixSDK()
+        sessionHandle = nil;
+        
+        self.berbixSDK = BerbixSDK()
         let config = buildBerbixConfig(config: config)
         
-        DispatchQueue.main.async { [self] in
-            let delegate = FlowDelegate(resolve: resolve, reject: reject)
+        DispatchQueue.main.async {
+            self.flowDelegate = FlowDelegate(resolve: resolve, reject: reject)
             
-            sessionHandle = berbixSDK.createSession(delegate: delegate, config: config) {
+            self.sessionHandle = self.berbixSDK?.createSession(delegate: self.flowDelegate!, config: config) {
                 resolve(true)
             }
         }
@@ -57,12 +61,14 @@ class BerbixSdk: UIViewController {
             return
         }
         
-        let berbixSDK = BerbixSDK()
+        self.flowDelegate?.update(resolve: resolve, reject: reject)
         
-        DispatchQueue.main.async { [self] in
+        DispatchQueue.main.async {
             let rootViewController: UIViewController =  (UIApplication.shared.windows.first?.rootViewController)!
-            berbixSDK.display(rootViewController, handle: sessionHandle!)
+            
+            self.berbixSDK!.display(rootViewController, handle: self.sessionHandle!)
         }
+        
     }
     
     @objc static func requiresMainQueueSetup() -> Bool {

@@ -19,6 +19,11 @@ class FlowDelegate: NSObject, BerbixFlowDelegate {
         super.init()
     }
     
+    public func update(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
+        self.resolve = resolve
+        self.reject = reject
+    }
+    
     func completed() {
         self.resolve(true);
     }
@@ -32,7 +37,7 @@ class FlowDelegate: NSObject, BerbixFlowDelegate {
         case .invalidState(let err):
             return self.reject("berbix_error", "invalid_state_error", NSError(domain: "berbix_error", code: 3, userInfo: ["NSLocalizedUserDescription": err ]))
         case .userExitError:
-            return self.reject("berbix_error", "user_exit_error", error)
+            return self.reject("berbix_error", "user_exit_error", NSError(domain: "berbix_error", code: 3, userInfo: ["NSLocalizedUserDescription": "user exited flow" ]))
             
         default: return self.reject("berbix_error", "unknown_error", error)
         }
