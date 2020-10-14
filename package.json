@@ -34,13 +34,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/MCROEngineering/react-native-berbix",
+  "repository": "https://github.com/berbix/berbix-react-native-wrapper",
   "author": "Mihai Chifor <mihai.chifor@mcro.tech> (https://mcro.tech)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MCROEngineering/react-native-berbix/issues"
+    "url": "https://github.com/berbix/berbix-react-native-wrapper/issues"
   },
-  "homepage": "https://github.com/MCROEngineering/react-native-berbix#readme",
+  "homepage": "https://github.com/berbix/berbix-react-native-wrapper#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",

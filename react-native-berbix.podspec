@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "11.0" }
-  s.source       = { :git => "https://github.com/MCROEngineering/react-native-berbix.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/berbix/berbix-react-native-wrapper.git", :tag => "#{s.version}" }
   s.source       = { :git => 'https://github.com/berbix/berbix-ios-spec.git', :tag => s.version.to_s }
 
 
