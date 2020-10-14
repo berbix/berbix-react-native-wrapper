@@ -1,12 +1,8 @@
 package com.reactnativeberbixsdk
 
-import android.content.Intent
-import android.os.Bundle
-import android.util.Log
 import com.berbix.berbixverify.BerbixConfigurationBuilder
-import com.berbix.berbixverify.BerbixConstants
+import com.berbix.berbixverify.BerbixEnvironment
 import com.berbix.berbixverify.BerbixSDK
-import com.berbix.berbixverify.activities.BerbixActivity
 import com.facebook.react.bridge.*
 
 class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
@@ -23,12 +19,22 @@ class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextB
 
     val clientToken = config.getString("clientToken") as String
     val baseUrl: String? = if (config.hasKey("baseUrl")) config.getString("baseUrl") else null
-    val debug: Boolean = if (config.hasKey("debug")) config.getBoolean("debug") else false
+    val env: Int? = if (config.hasKey("environment")) config.getInt("environment") else 2
+    val environment: BerbixEnvironment?
+
+    environment = when (env) {
+      1 -> BerbixEnvironment.SANDBOX
+      2 -> BerbixEnvironment.STAGING
+      3 -> BerbixEnvironment.PRODUCTION
+      else -> {
+        BerbixEnvironment.STAGING
+      }
+    }
 
     val sdk = BerbixSDK()
     val berbixConfig = BerbixConfigurationBuilder()
       .setClientToken(clientToken)
-      .setDebug(debug)
+      .setEnvironment(environment)
 
     if (baseUrl != null) {
       berbixConfig.setBaseURL(baseUrl)
