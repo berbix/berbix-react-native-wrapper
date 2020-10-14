@@ -13,6 +13,7 @@
   - [2. Parameter details](#2-configuration-details)
   - [3. Success Response](#3-success-response)
   - [4. Failure Response](#4-failure-response)
+- [Example app](#example-app)
 - [Theme setup](#theme-setup)
 - [More Information](#more-information)
   - [Support](#support)
@@ -277,6 +278,31 @@ Example
   message: "client token is invalid"
 }
 ```
+
+## Example app
+
+Clone the repository
+```bash
+git clone https://github.com/berbix/berbix-react-native-wrapper.git
+```
+
+Setup the example app
+```bash
+cd berbix-react-native-wrapper/
+yarn bootstrap
+```
+
+Run the ios app
+```bash
+yarn example ios
+```
+
+Run the android app
+```bash
+yarn example android
+```
+
+Beware that the verify flow will fail if a valid **clientToken** is not supplied in _/example/src/App.tsx_
 
 ## Theme Setup
 
