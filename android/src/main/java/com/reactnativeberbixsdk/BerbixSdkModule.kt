@@ -4,6 +4,7 @@ import com.berbix.berbixverify.BerbixConfigurationBuilder
 import com.berbix.berbixverify.BerbixEnvironment
 import com.berbix.berbixverify.BerbixSDK
 import com.facebook.react.bridge.*
+import java.util.*
 
 class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -19,6 +20,11 @@ class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextB
 
     val clientToken = config.getString("clientToken") as String
     val baseUrl: String? = if (config.hasKey("baseUrl")) config.getString("baseUrl") else null
+    val email: String? = if (config.hasKey("email")) config.getString("email") else null
+    val phone: String? = if (config.hasKey("phone")) config.getString("phone") else null
+    val templateKey: String? = if (config.hasKey("templateKey")) config.getString("templateKey") else null
+    val debug: Boolean = if (config.hasKey("debug")) config.getBoolean("debug") else false
+
     val env: Int? = if (config.hasKey("environment")) config.getInt("environment") else 2
     val environment: BerbixEnvironment?
 
@@ -35,9 +41,19 @@ class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextB
     val berbixConfig = BerbixConfigurationBuilder()
       .setClientToken(clientToken)
       .setEnvironment(environment)
+      .setDebug(debug)
 
     if (baseUrl != null) {
       berbixConfig.setBaseURL(baseUrl)
+    }
+    if (email != null) {
+      berbixConfig.setEmail(email)
+    }
+    if (phone != null) {
+      berbixConfig.setPhone(phone)
+    }
+    if (templateKey != null) {
+      berbixConfig.setTemplateKey(templateKey)
     }
 
     val activity = reactContext.currentActivity
@@ -51,6 +67,4 @@ class BerbixSdkModule(val reactContext: ReactApplicationContext) : ReactContextB
     }
 
   }
-
-
 }
