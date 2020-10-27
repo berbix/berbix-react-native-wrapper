@@ -1,19 +1,19 @@
 {
-  "name": "react-native-berbix-example",
-  "description": "Example app for react-native-berbix",
+  "name": "berbix-react-native-example",
+  "description": "Example app for berbix-react-native",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "preinstall": "(cd ../ && npx yalc publish) && npx yalc add @react-native-berbix",
-    "postinstall": "node scripts/examples_postinstall.js && rm -rf node_modules/react-native-berbix/node_modules"
+    "preinstall": "(cd ../ && npx yalc publish) && npx yalc add @berbix-react-native",
+    "postinstall": "node scripts/examples_postinstall.js && rm -rf node_modules/berbix-react-native/node_modules"
   },
   "dependencies": {
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-berbix": "file:.yalc/react-native-berbix"
+    "berbix-react-native": "file:.yalc/berbix-react-native"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

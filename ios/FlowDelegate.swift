@@ -1,6 +1,6 @@
 //
 //  FlowDelegate.swift
-//  react-native-berbix-sdk
+//  berbix-react-native-sdk
 //
 //  Created by Mihai Chifor on 03/10/2020.
 //
