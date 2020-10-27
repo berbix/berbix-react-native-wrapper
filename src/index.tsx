@@ -3,10 +3,10 @@ import { NativeModules } from 'react-native';
 const { BerbixSdk } = NativeModules;
 
 export enum BerbixEnvironment {
-  development,
-  sandbox,
-  staging,
-  production,
+  development = 'development',
+  sandbox = 'sandbox',
+  staging = 'staging',
+  production = 'production',
 }
 
 export type BerbixConfiguration = {

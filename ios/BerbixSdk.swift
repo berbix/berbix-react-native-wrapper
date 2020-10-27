@@ -2,9 +2,20 @@ import Foundation
 import Berbix
 
 public func buildBerbixConfig(config:NSDictionary) -> BerbixConfiguration {
-    let clientToken:String = config["clientToken"] as! String
-    let baseUrl:String? = config["baseUrl"] as? String
-    let environment: BerbixEnvironment = config["environment"] as? BerbixEnvironment ?? BerbixEnvironment.staging
+    let clientToken: String = config["clientToken"] as! String
+    let baseUrl: String? = config["baseUrl"] as? String
+
+    var environment: BerbixEnvironment = BerbixEnvironment.production
+    switch config["environment"] as? String {
+    case "sandbox":
+        environment = BerbixEnvironment.sandbox
+    case "staging":
+        environment = BerbixEnvironment.staging
+    case "production":
+        environment = BerbixEnvironment.production
+    default:
+        environment = BerbixEnvironment.production
+    }
     
     var config = BerbixConfigurationBuilder()
         .withClientToken(clientToken)
@@ -28,12 +39,12 @@ class BerbixSdk: NSObject {
     @objc(startFlow:withResolver:withRejecter:)
     func startFlow(config: NSDictionary, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) -> Void {
         let berbixSDK = BerbixSDK()
-        let config = buildBerbixConfig(config: config)
+        let berbixConfig = buildBerbixConfig(config: config)
         
         DispatchQueue.main.async {
             let rootViewController: UIViewController =  (UIApplication.shared.windows.first?.rootViewController)!
             let delegate = FlowDelegate(resolve: resolve, reject: reject)
-            berbixSDK.startFlow(rootViewController, delegate: delegate, config: config)
+            berbixSDK.startFlow(rootViewController, delegate: delegate, config: berbixConfig)
         }
     }
     
@@ -42,12 +53,12 @@ class BerbixSdk: NSObject {
         sessionHandle = nil;
         
         self.berbixSDK = BerbixSDK()
-        let config = buildBerbixConfig(config: config)
+        let berbixConfig = buildBerbixConfig(config: config)
         
         DispatchQueue.main.async {
             self.flowDelegate = FlowDelegate(resolve: resolve, reject: reject)
             
-            self.sessionHandle = self.berbixSDK?.createSession(delegate: self.flowDelegate!, config: config) {
+            self.sessionHandle = self.berbixSDK?.createSession(delegate: self.flowDelegate!, config: berbixConfig) {
                 resolve(true)
             }
         }
