@@ -1,6 +1,6 @@
 {
   "name": "berbix-react-native",
-  "version": "0.1.0",
+  "version": "1.0.0-beta1",
   "description": "React Native SDK for use with the Berbix service.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -34,13 +34,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/berbix/berbix-react-native-wrapper",
+  "repository": "https://github.com/berbix/berbix-react-native",
   "author": "Mihai Chifor <mihai.chifor@mcro.tech> (https://mcro.tech)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/berbix/berbix-react-native-wrapper/issues"
+    "url": "https://github.com/berbix/berbix-react-native/issues"
   },
-  "homepage": "https://github.com/berbix/berbix-react-native-wrapper#readme",
+  "homepage": "https://github.com/berbix/berbix-react-native#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",
