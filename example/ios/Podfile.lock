@@ -1,5 +1,5 @@
 PODS:
-  - Berbix (1.0.7)
+  - Berbix (1.10.2)
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.62.2)
@@ -184,7 +184,7 @@ PODS:
     - React-jsi (= 0.62.2)
   - React-jsinspector (0.62.2)
   - "berbix-react-native (0.1.0+33ba4585)":
-    - Berbix (= 1.0.7)
+    - Berbix (= 1.10.2)
     - React
   - React-RCTActionSheet (0.62.2):
     - React-Core/RCTActionSheetHeaders (= 0.62.2)
