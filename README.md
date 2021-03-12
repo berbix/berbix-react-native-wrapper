@@ -21,7 +21,7 @@
 
 ## Overview
 
-The Berbix React Native SDK is a React Native wrapper around the Berbix native mobile SDKs for Android and iOS. It enables customers of Berbix to quickly get up and running with best-in-class identity verification in a React Native setting. If you're interested in using Berbix for identity verification and you are not already a customer, you can learn more at [berbix.com][https://berbix.com].
+The Berbix React Native SDK is a React Native wrapper around the Berbix native mobile SDKs for Android and iOS. It enables customers of Berbix to quickly get up and running with best-in-class identity verification in a React Native setting. If you're interested in using Berbix for identity verification and you are not already a customer, you can learn more at [berbix.com](https://berbix.com).
 
 - Supports iOS 11+
 - Supports Android API level 21+
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
 
 const config = {
   clientToken: 'client_token',
-  environment: BerbixEnvironment.staging,
+  environment: BerbixEnvironment.production,
 };
 
 export default () => {
@@ -291,7 +291,7 @@ Run the ios app
 yarn example ios
 ```
 
-Run the android app
+Run the android app. If this fails, you might need to first open the project in Android studio before re-running the command.
 
 ```bash
 yarn example android
@@ -301,7 +301,7 @@ Beware that the verify flow will fail if a valid **clientToken** is not supplied
 
 ## More Information
 
-Copyright 2020 Berbix. All rights reserved.
+Copyright 2021 Berbix. All rights reserved.
 
 ## License
 

@@ -1,6 +1,6 @@
 {
   "name": "berbix-react-native",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0",
   "description": "React Native SDK for use with the Berbix service.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -23,7 +23,6 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
