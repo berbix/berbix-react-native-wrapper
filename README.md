@@ -21,7 +21,7 @@
 
 ## Overview
 
-The Berbix React Native SDK is a React Native wrapper around the Berbix native mobile SDKs for Android and iOS. It enables customers of Berbix to quickly get up and running with best-in-class identity verification in a React Native setting. If you're interested in using Berbix for identity verification and you are not already a customer, you can learn more at [berbix.com][https://berbix.com].
+The Berbix React Native SDK is a React Native wrapper around the Berbix native mobile SDKs for Android and iOS. It enables customers of Berbix to quickly get up and running with best-in-class identity verification in a React Native setting. If you're interested in using Berbix for identity verification and you are not already a customer, you can learn more at [berbix.com](https://berbix.com).
 
 - Supports iOS 11+
 - Supports Android API level 21+
