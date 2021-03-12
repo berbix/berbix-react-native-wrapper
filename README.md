@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
 
 const config = {
   clientToken: 'client_token',
-  environment: BerbixEnvironment.staging,
+  environment: BerbixEnvironment.production,
 };
 
 export default () => {
@@ -291,7 +291,7 @@ Run the ios app
 yarn example ios
 ```
 
-Run the android app
+Run the android app. If this fails, you might need to first open the project in Android studio before re-running the command.
 
 ```bash
 yarn example android
@@ -301,7 +301,7 @@ Beware that the verify flow will fail if a valid **clientToken** is not supplied
 
 ## More Information
 
-Copyright 2020 Berbix. All rights reserved.
+Copyright 2021 Berbix. All rights reserved.
 
 ## License
 
