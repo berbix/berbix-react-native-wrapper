@@ -7,7 +7,7 @@ target 'BerbixSdk' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Berbix', '1.10.2'
+  pod 'Berbix', '1.10.3-beta2'
 
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
