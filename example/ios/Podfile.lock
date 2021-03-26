@@ -1,6 +1,6 @@
 PODS:
   - Berbix (1.10.3-beta2)
-  - "berbix-react-native (1.0.0+70879cee)":
+  - "berbix-react-native (1.0.0+9edbf62d)":
     - Berbix (= 1.10.3-beta2)
     - React
   - boost-for-react-native (1.63.0)
@@ -340,7 +340,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Berbix: cebb807e0b9e04184458fba11b796c0c282323a4
-  berbix-react-native: 723fd625ca31dcc2da7c1c0d8b808b1d47afff9b
+  berbix-react-native: 2de54d873cf0dc2c41b88a620469bb8c9001b0f3
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245

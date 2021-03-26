@@ -1,6 +1,6 @@
 {
   "name": "berbix-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1-beta1",
   "description": "React Native SDK for use with the Berbix service.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
