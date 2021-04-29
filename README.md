@@ -116,7 +116,7 @@ You can launch the Berbix verify flow with a call to `Berbix.startFlow`. Here's 
 ```javascript
 import * as React from 'react';
 import { StyleSheet, View, Text, Button, Platform } from 'react-native';
-import Berbix, { BerbixEnvironment } from 'berbix-react-native';
+import Berbix from 'berbix-react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -170,7 +170,7 @@ On iOS, you also have the option to create the session (`Berbix.createSession`) 
 ```javascript
 import * as React from 'react';
 import { StyleSheet, View, Text, Button, Platform } from 'react-native';
-import Berbix, { BerbixEnvironment } from 'berbix-react-native';
+import Berbix from 'berbix-react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -193,7 +193,6 @@ const styles = StyleSheet.create({
 
 const config = {
   clientToken: 'client_token',
-  environment: BerbixEnvironment.production,
 };
 
 export default () => {
@@ -250,7 +249,6 @@ config = {
 | ----------------- | ---------------------------------------------------------------------------------- | ----------------- | ---------------------------- |
 | **`clientToken`** | Used to initialise the Berbix Verify user flow                                     | String            | **Required**                 |
 | **`baseUrl`**     | BaseUrl description                                                                | String            | null                         |
-| **`environment`** | BerbixEnvironment.sandbox, BerbixEnvironment.staging, BerbixEnvironment.production | BerbixEnvironment | BerbixEnvironment.production |
 
 ### 3. Success Response
 
@@ -283,6 +281,17 @@ Setup the example app
 ```bash
 cd berbix-react-native-wrapper/
 yarn bootstrap
+```
+
+You may want to force using a local `berbix-react-native-wrapper` instead of the published version. 
+To do this, run the following before running the app:
+```
+yarn example preinstall
+```
+
+To revert back to the published version:
+```
+yarn example postinstall
 ```
 
 Run the ios app

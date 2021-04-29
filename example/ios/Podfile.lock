@@ -1,7 +1,7 @@
 PODS:
-  - Berbix (1.10.2)
-  - "berbix-react-native (1.0.0+fae972bd)":
-    - Berbix (= 1.10.2)
+  - Berbix (2.0.0-rc01)
+  - "berbix-react-native (2.0.0-rc01+11d55362)":
+    - Berbix (= 2.0.0-rc01)
     - React
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
@@ -339,8 +339,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Berbix: d0825d64ce8d2190af706f04ecbb9f19f573bc23
-  berbix-react-native: 5e90e6250fb4e13ef11d0ae6ef63940cee921346
+  Berbix: 42b2d5246d8e22bab29adbb6d73dd73662177706
+  berbix-react-native: 8bc38d92790d9f99ef045381fd81377750eea045
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245

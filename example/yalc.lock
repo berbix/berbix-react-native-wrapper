@@ -4,6 +4,10 @@
     "react-native-berbix": {
       "signature": "33ba4585eeb39a87330ce22dc4be48dc",
       "file": true
+    },
+    "berbix-react-native": {
+      "signature": "11d55362038d1916177d03a7211aafb0",
+      "file": true
     }
   }
 }
