@@ -347,13 +347,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-<<<<<<< HEAD
   Berbix: 50863873b8a2e881f6e72730ef58870eaefd0c82
   berbix-react-native: b38abfcc2160981f7f611ebaa1480bf3c7d0ed9b
-=======
-  Berbix: 42b2d5246d8e22bab29adbb6d73dd73662177706
-  berbix-react-native: 8bc38d92790d9f99ef045381fd81377750eea045
->>>>>>> 136fb42817c5a5655f3a753f39beaf6e1db6b6ca
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245
@@ -383,6 +378,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
 
-PODFILE CHECKSUM: 06d0984470cd89fa6e5a65cea1f1a36daf2760d4
+PODFILE CHECKSUM: 90bdba727f006a8a28e9097c780803bd16dbfc47
 
 COCOAPODS: 1.10.1
