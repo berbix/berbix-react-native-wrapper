@@ -342,7 +342,11 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+<<<<<<< HEAD
   Berbix: 50863873b8a2e881f6e72730ef58870eaefd0c82
+=======
+  Berbix: 42b2d5246d8e22bab29adbb6d73dd73662177706
+>>>>>>> 136fb42817c5a5655f3a753f39beaf6e1db6b6ca
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245

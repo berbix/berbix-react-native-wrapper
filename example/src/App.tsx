@@ -1,4 +1,4 @@
-import BerbixSdk, { BerbixEnvironment } from 'berbix-react-native';
+import BerbixSdk from 'berbix-react-native';
 import * as React from 'react';
 import { Button, Platform, StyleSheet, Text, View } from 'react-native';
 
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
 
 const config = {
   clientToken: 'test',
-  environment: BerbixEnvironment.production,
 };
 
 export default function App() {

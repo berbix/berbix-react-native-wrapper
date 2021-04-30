@@ -2,17 +2,9 @@ import { NativeModules } from 'react-native';
 
 const { BerbixSdk } = NativeModules;
 
-export enum BerbixEnvironment {
-  development = 'development',
-  sandbox = 'sandbox',
-  staging = 'staging',
-  production = 'production',
-}
-
 export type BerbixConfiguration = {
   clientToken: string;
   baseUrl?: string;
-  environment?: BerbixEnvironment;
 
   /* Android only */
   debug?: boolean;
@@ -42,10 +34,6 @@ const checkConfigValidity = (config: BerbixConfiguration): Error | null => {
     )
   ) {
     return new Error('clientToken is not a valid JWT token');
-  }
-
-  if (config.environment && !(config.environment in BerbixEnvironment)) {
-    return new Error('environment is not of BerbixEnvironment type');
   }
 
   if (config.baseUrl && typeof config.baseUrl !== 'string') {
