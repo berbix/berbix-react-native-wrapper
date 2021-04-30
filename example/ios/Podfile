@@ -5,6 +5,8 @@ target 'BerbixSdkExample' do
   source 'https://github.com/CocoaPods/Specs.git'
   source 'https://github.com/berbix/berbix-ios-spec.git'
 
+  use_frameworks!
+
   # Pods for BerbixSdkExample
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
