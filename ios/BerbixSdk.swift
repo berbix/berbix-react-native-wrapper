@@ -4,22 +4,9 @@ import Berbix
 public func buildBerbixConfig(config:NSDictionary) -> BerbixConfiguration {
     let clientToken: String = config["clientToken"] as! String
     let baseUrl: String? = config["baseUrl"] as? String
-
-    var environment: BerbixEnvironment = BerbixEnvironment.production
-    switch config["environment"] as? String {
-    case "sandbox":
-        environment = BerbixEnvironment.sandbox
-    case "staging":
-        environment = BerbixEnvironment.staging
-    case "production":
-        environment = BerbixEnvironment.production
-    default:
-        environment = BerbixEnvironment.production
-    }
     
     var config = BerbixConfigurationBuilder()
         .withClientToken(clientToken)
-        .withEnvironment(environment)
     
     if (baseUrl != nil) {
         config = config.withBaseURL(baseUrl!)

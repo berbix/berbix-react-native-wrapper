@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera needed for taking photos of your documents / face</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Submit a photo of your ID</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

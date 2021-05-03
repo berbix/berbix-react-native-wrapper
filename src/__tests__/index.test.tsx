@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import BerbixSdk, { BerbixConfiguration, BerbixEnvironment } from '../index';
+import BerbixSdk, { BerbixConfiguration } from '../index';
 
 // add mock
 jest.mock(
@@ -51,9 +51,7 @@ it('should reject when starting the flow without a config', () => {
 });
 
 it('should reject when starting the flow without setting up the clientToken in config', () => {
-  return startFlow({ environment: BerbixEnvironment.staging }).then((result) =>
-    expect(result).toBe(REJECTED)
-  );
+  return startFlow({}).then((result) => expect(result).toBe(REJECTED));
 });
 
 it('should reject when starting the flow with an invalid JWT *clientToken*', () => {
@@ -66,13 +64,6 @@ it('should resolve when starting the flow with a config that contains only a val
   return startFlow({
     clientToken: validConfig.clientToken,
   }).then((result) => expect(result).toBe(RESOLVED));
-});
-
-it('should reject when starting the flow with an invalid *environment*', () => {
-  return startFlow({
-    ...validConfig,
-    environment: 'invalid env',
-  }).then((result) => expect(result).toBe(REJECTED));
 });
 
 it('should reject when starting the flow with a config containing *baseUrl* that is not of type string', () => {
@@ -112,22 +103,13 @@ it('should reject when creating a session without a config', () => {
 });
 
 it('should reject when creating a session without setting up the *clientToken* in config', () => {
-  return createSession({
-    environment: BerbixEnvironment.staging,
-  }).then((result) => expect(result).toBe(REJECTED));
+  return createSession({}).then((result) => expect(result).toBe(REJECTED));
 });
 
 it('should reject when creating a session with an invalid JWT *clientToken*', () => {
   return createSession({ clientToken: 'invalid_jwt' }).then((result) =>
     expect(result).toBe(REJECTED)
   );
-});
-
-it('should reject when creating a session with an invalid *environment*', () => {
-  return createSession({
-    ...validConfig,
-    environment: 'invalid env',
-  }).then((result) => expect(result).toBe(REJECTED));
 });
 
 it('should reject when creating a session with a config containing *baseUrl* that is not of type string', () => {
