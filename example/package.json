@@ -11,9 +11,9 @@
     "postinstall": "node scripts/examples_postinstall.js && rm -rf node_modules/berbix-react-native/node_modules"
   },
   "dependencies": {
+    "berbix-react-native": "file:.yalc/berbix-react-native",
     "react": "16.11.0",
-    "react-native": "0.62.2",
-    "berbix-react-native": "file:.yalc/berbix-react-native"
+    "react-native": "0.62.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

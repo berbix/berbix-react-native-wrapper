@@ -1,7 +1,6 @@
 PODS:
-  - Berbix (2.0.0-rc01):
+  - Berbix (2.0.0-rc02):
     - Sentry (~> 6.2.1)
-    - SwiftyJSON (~> 4.0)
   - berbix-react-native (2.0.0-rc01):
     - Berbix (= 2.0.0-rc01)
     - React
