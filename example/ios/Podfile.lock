@@ -1,8 +1,8 @@
 PODS:
-  - Berbix (2.0.0-rc02):
+  - Berbix (2.0.0-rc03):
     - Sentry (~> 6.2.1)
-  - "berbix-react-native (2.0.0-rc02+52fabaea)":
-    - Berbix (= 2.0.0-rc02)
+  - berbix-react-native (2.0.0-rc03):
+    - Berbix (= 2.0.0-rc03)
     - React
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
@@ -314,9 +314,8 @@ SPEC REPOS:
   https://github.com/berbix/berbix-ios-spec.git:
     - Berbix
   https://github.com/CocoaPods/Specs.git:
-    - Sentry
-  trunk:
     - boost-for-react-native
+    - Sentry
 
 EXTERNAL SOURCES:
   berbix-react-native:
@@ -379,12 +378,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Berbix: fd5f5f1c395b8a014ae1cd45094713dd060b3f95
-  berbix-react-native: da59008b51851af432dc982c3742d24065c96667
+  Berbix: 450e2e8924b7526be395f1756ffdf9566dc69282
+  berbix-react-native: 5f2bc95f268ae5845c508fd920df068274c0b033
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 49cbe4b43e445b06bf29199b6ad2057649e4c8f5
-  FBReactNativeSpec: 9eaf9e58afa64465ad96922c60b010a8d4cd0c95
+  FBReactNativeSpec: 179028a77fad5c26464fb4969de1a6750fcbe3cb
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: 2f8cb5b7533219bf4218a045f92768129cf7050a
