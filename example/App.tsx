@@ -1,6 +1,6 @@
 import BerbixSdk from 'berbix-react-native';
 import * as React from 'react';
-import {Button, Platform, StyleSheet, Text, View} from 'react-native';
+import { Button, Platform, StyleSheet, Text, View } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,8 +27,7 @@ const styles = StyleSheet.create({
 });
 
 const config = {
-  clientToken:
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjY1MDYwNjc2NjQzMDYxNzYsImNpZCI6NTYzNDQ3MjU2OTQ3MDk3NiwiY3R0IjowLCJodHQiOjAsImF1ZCI6InZlcmlmeS5iZXJiaXguY29tIiwiZXhwIjoxNjIwODQ1NjQ1LCJpYXQiOjE2MjA4NDIwNDUsInN1YiI6ImNjIn0.bcBTzFI_TfMiVn8nKVhlf0puh_t4BuwyPLFlpN85jhM',
+  clientToken: 'test',
 };
 
 export default function App() {
