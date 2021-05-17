@@ -69,16 +69,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to Berbix rn sdk</Text>
-      <Text
-        style={styles.instructions}
-      >{`Press "Start Flow" to start Berbix flow automatically after configuration is done`}</Text>
+      <Text style={styles.instructions}>
+        {
+          'Press "Start Flow" to start Berbix flow automatically after configuration is done'
+        }
+      </Text>
       <Button title="Start Flow" onPress={startFlow} />
 
       {Platform.OS === 'ios' && (
         <>
-          <Text
-            style={styles.instructions}
-          >{`Press "Create session" to start a handled Berbix flow`}</Text>
+          <Text style={styles.instructions}>
+            {'Press "Create session" to start a handled Berbix flow'}
+          </Text>
           <Button title="Create Session" onPress={createSession} />
           <Text>{sessionCreated ? 'Session created' : 'No session'}</Text>
 

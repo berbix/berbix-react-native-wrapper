@@ -1,5 +1,5 @@
 PODS:
-  - Berbix (2.0.0-rc03):
+  - Berbix (2.0.0-rc04):
     - Sentry (~> 6.2.1)
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
@@ -249,7 +249,7 @@ PODS:
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - Berbix (= 2.0.0-rc03)
+  - Berbix (= 2.0.0-rc04)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
