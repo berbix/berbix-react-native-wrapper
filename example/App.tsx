@@ -1,6 +1,6 @@
 import BerbixSdk from 'berbix-react-native';
 import * as React from 'react';
-import { Button, Platform, StyleSheet, Text, View } from 'react-native';
+import {Button, Platform, StyleSheet, Text, View} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
 });
 
 const config = {
-  clientToken: 'test',
+  clientToken:
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjY1MDYwNjc2NjQzMDYxNzYsImNpZCI6NTYzNDQ3MjU2OTQ3MDk3NiwiY3R0IjowLCJodHQiOjAsImF1ZCI6InZlcmlmeS5iZXJiaXguY29tIiwiZXhwIjoxNjIwODQ1NjQ1LCJpYXQiOjE2MjA4NDIwNDUsInN1YiI6ImNjIn0.bcBTzFI_TfMiVn8nKVhlf0puh_t4BuwyPLFlpN85jhM',
 };
 
 export default function App() {
@@ -69,16 +70,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to Berbix rn sdk</Text>
-      <Text
-        style={styles.instructions}
-      >{`Press "Start Flow" to start Berbix flow automatically after configuration is done`}</Text>
+      <Text style={styles.instructions}>
+        {
+          'Press "Start Flow" to start Berbix flow automatically after configuration is done'
+        }
+      </Text>
       <Button title="Start Flow" onPress={startFlow} />
 
       {Platform.OS === 'ios' && (
         <>
-          <Text
-            style={styles.instructions}
-          >{`Press "Create session" to start a handled Berbix flow`}</Text>
+          <Text style={styles.instructions}>
+            {'Press "Create session" to start a handled Berbix flow'}
+          </Text>
           <Button title="Create Session" onPress={createSession} />
           <Text>{sessionCreated ? 'Session created' : 'No session'}</Text>
 
