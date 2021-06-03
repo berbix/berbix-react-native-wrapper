@@ -1790,7 +1790,7 @@ bcrypt-pbkdf@^1.0.0:
     tweetnacl "^0.14.3"
 
 "berbix-react-native@file:.yalc/berbix-react-native":
-  version "2.0.0-rc03"
+  version "2.0.0"
 
 big-integer@^1.6.44:
   version "1.6.48"

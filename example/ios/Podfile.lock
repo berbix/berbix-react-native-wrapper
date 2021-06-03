@@ -1,8 +1,8 @@
 PODS:
-  - Berbix (2.0.0-rc04):
+  - Berbix (2.0.1):
     - Sentry (~> 6.2.1)
-  - berbix-react-native (2.0.0-rc04):
-    - Berbix (= 2.0.0-rc04)
+  - berbix-react-native (2.0.0):
+    - Berbix (= 2.0.0)
     - React
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
