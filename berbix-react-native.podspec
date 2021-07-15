@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependency "Berbix", "2.0.1"
+  s.dependency "Berbix", "2.2.0"
 end
