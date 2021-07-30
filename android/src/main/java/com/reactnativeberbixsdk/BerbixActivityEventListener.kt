@@ -40,10 +40,6 @@ class BerbixActivityEventListener(val promise: Promise): BaseActivityEventListen
           Log.e("berbix-result", "unknown error")
           promise.reject(Error("unknown error"))
         }
-        BerbixResultStatus.UNEXPECTED_RESULT_STATUS -> {
-          Log.e("berbix-result", "unexpected result status")
-          promise.reject(Error("unexpected result status"))
-        }
       }
     }
   }
