@@ -1,8 +1,8 @@
 PODS:
-  - Berbix (2.2.0):
+  - Berbix (2.2.1):
     - Sentry (~> 6.2.1)
-  - berbix-react-native (2.1.0):
-    - Berbix (= 2.2.0)
+  - berbix-react-native (2.1.1):
+    - Berbix (= 2.2.1)
     - React
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
@@ -278,7 +278,7 @@ PODS:
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - berbix-react-native (from `../node_modules/berbix-react-native`)
+  - berbix-react-native (from `../.yalc/berbix-react-native`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -319,7 +319,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   berbix-react-native:
-    :path: "../node_modules/berbix-react-native"
+    :path: "../.yalc/berbix-react-native"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -378,8 +378,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Berbix: 0452c135b023c4cdc7f8ad1b54def2d637c4dfaf
-  berbix-react-native: ffb6798f0e8540cc06f45d8929ef2887387262ff
+  Berbix: ac9eff17f2c95f1e34327a313d36a46d04bac4c8
+  berbix-react-native: 26f43215ee1c63aefb1ece2fcd9d9a34a0b6775c
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 49cbe4b43e445b06bf29199b6ad2057649e4c8f5
