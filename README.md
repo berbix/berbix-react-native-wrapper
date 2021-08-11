@@ -48,6 +48,7 @@ Change `ios/Podfile` to use version 11 and to include Berbix iOS Cocoapod spec
 
 ```
 platform :ios, '11.0'
+use_frameworks!
 
 target 'YourProject' do
   ...
