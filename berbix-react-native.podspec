@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
 
-  s.dependency "React"
+  s.dependency "React-Core"
   s.dependency "Berbix", "2.2.1"
 end
