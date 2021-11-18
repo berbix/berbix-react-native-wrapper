@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229507C82745DC44006DB5FB /* FlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A91F252528C16A005A84C7 /* FlowDelegate.swift */; };
 		552297F5FD71E820989E1BB6 /* Pods_BerbixSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC193D9C6FBAA1FB461E4FA /* Pods_BerbixSdk.framework */; };
 		F4FF95D7245B92E800C19C63 /* BerbixSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* BerbixSdk.swift */; };
 /* End PBXBuildFile section */
@@ -167,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229507C82745DC44006DB5FB /* FlowDelegate.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* BerbixSdk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
