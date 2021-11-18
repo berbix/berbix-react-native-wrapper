@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/berbix/berbix-ios-spec.git', :tag => s.version.to_s }
 
 
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
+  s.source_files = "ios/*.{h,m,mm,swift}"
 
 
   s.dependency "React-Core"
