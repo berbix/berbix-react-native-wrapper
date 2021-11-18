@@ -42,5 +42,5 @@ target 'BerbixSdk' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'RCT-Folly', :podspec => '../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec'
-  pod 'boost', :path => "../node_modules/react-native/third-party-podspecs/boost.podspec"
+  pod 'boost', :podspec => "../node_modules/react-native/third-party-podspecs/boost.podspec"
 end

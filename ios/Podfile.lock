@@ -320,7 +320,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   boost:
-    :path: "../node_modules/react-native/third-party-podspecs/boost.podspec"
+    :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -414,6 +414,6 @@ SPEC CHECKSUMS:
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
   Yoga: 32a18c0e845e185f4a2a66ec76e1fd1f958f22fa
 
-PODFILE CHECKSUM: ab6d985ff70283a393bfdf8878e97d088bdf688b
+PODFILE CHECKSUM: 790912851a2cc0dea9ef0250a69814d5588ad3ef
 
 COCOAPODS: 1.11.2
