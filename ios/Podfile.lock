@@ -29,6 +29,19 @@ PODS:
     - RCT-Folly (= 2021.06.28.00-v2)
     - RCTRequired (= 0.66.3)
     - React-Core (= 0.66.3)
+  - React (0.66.3):
+    - React-Core (= 0.66.3)
+    - React-Core/DevSupport (= 0.66.3)
+    - React-Core/RCTWebSocket (= 0.66.3)
+    - React-RCTActionSheet (= 0.66.3)
+    - React-RCTAnimation (= 0.66.3)
+    - React-RCTBlob (= 0.66.3)
+    - React-RCTImage (= 0.66.3)
+    - React-RCTLinking (= 0.66.3)
+    - React-RCTNetwork (= 0.66.3)
+    - React-RCTSettings (= 0.66.3)
+    - React-RCTText (= 0.66.3)
+    - React-RCTVibration (= 0.66.3)
   - React-callinvoker (0.66.3)
   - React-Core (0.66.3):
     - glog
@@ -274,6 +287,7 @@ DEPENDENCIES:
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
+  - React (from `../node_modules/react-native/`)
   - React-callinvoker (from `../node_modules/react-native/ReactCommon/callinvoker`)
   - React-Core (from `../node_modules/react-native/`)
   - React-Core/DevSupport (from `../node_modules/react-native/`)
@@ -295,7 +309,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
-  - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon/ReactCommon.podspec`)
+  - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -321,6 +335,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
     :path: "../node_modules/react-native/Libraries/TypeSafety"
+  React:
+    :path: "../node_modules/react-native/"
   React-callinvoker:
     :path: "../node_modules/react-native/ReactCommon/callinvoker"
   React-Core:
@@ -360,7 +376,7 @@ EXTERNAL SOURCES:
   React-runtimeexecutor:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
-    :path: "../node_modules/react-native/ReactCommon/ReactCommon.podspec"
+    :path: "../node_modules/react-native/ReactCommon"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -375,6 +391,7 @@ SPEC CHECKSUMS:
   RCT-Folly: a21c126816d8025b547704b777a2ba552f3d9fa9
   RCTRequired: 59d2b744d8c2bf2d9bc7032a9f654809adcf7d50
   RCTTypeSafety: d0aaf7ccae5c70a4aaa3a5c3e9e0db97efae760e
+  React: fbe655dd1d12c052299b61abdc576720098d80fc
   React-callinvoker: a535746608d9bc8b1dea7095ed4d8d3d7aae9a05
   React-Core: 008d2638c4f80b189c8e170ff2d241027ec517fd
   React-CoreModules: 91c9a03f4e1b74494c087d9c9a29e89a3145c228
@@ -397,6 +414,6 @@ SPEC CHECKSUMS:
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
   Yoga: 32a18c0e845e185f4a2a66ec76e1fd1f958f22fa
 
-PODFILE CHECKSUM: f219d4e27973227a5a84b005d6825722562ed138
+PODFILE CHECKSUM: b3fd149a9bfb30b75d752a6a5be1226963b00372
 
 COCOAPODS: 1.11.2
