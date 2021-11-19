@@ -1,5 +1,6 @@
 import Foundation
 import Berbix
+import React
 
 public func buildBerbixConfig(config:NSDictionary) -> BerbixConfiguration {
     let clientToken: String = config["clientToken"] as! String

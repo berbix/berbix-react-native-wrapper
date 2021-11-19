@@ -7,6 +7,7 @@
 
 import Foundation
 import Berbix
+import React
 
 class FlowDelegate: NSObject, BerbixFlowDelegate {
     var resolve: RCTPromiseResolveBlock
