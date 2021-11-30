@@ -82,6 +82,7 @@ jobs:
       - run:
           name: Build iOS Example
           command: |
+            yarn bootstrap
             yarn build-ios
 
 workflows:
