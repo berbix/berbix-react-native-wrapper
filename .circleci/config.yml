@@ -7,7 +7,7 @@ executors:
     working_directory: ~/project
   ios:
     macos:
-      xcode: 13.1.0
+      xcode: 13.0.0
     working_directory: ~/project
   android:
     docker:
@@ -86,7 +86,8 @@ jobs:
       - run:
           name: Build iOS Example
           command: |
-            yarn build-ios
+            cd example
+            yarn release-ios
 
   build-android-example:
     executor: android
@@ -95,7 +96,8 @@ jobs:
       - run:
           name: Build Android Example
           command: |
-            yarn build-android
+            cd example
+            yarn release-android
 
 workflows:
   build-and-test:
