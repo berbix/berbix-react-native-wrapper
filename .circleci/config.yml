@@ -9,6 +9,10 @@ executors:
     macos:
       xcode: 13.1.0
     working_directory: ~/project
+  android:
+    docker:
+      - image: circleci/android:api-29-node
+    working_directory: ~/project
 
 commands:
   attach_project:
@@ -84,6 +88,16 @@ jobs:
           command: |
             yarn bootstrap
             yarn build-ios
+
+  build-android-example:
+    executor: android
+    steps:
+      - attach_project
+      - run:
+          name: Build Android Example
+          command: |
+            yarn bootstrap
+            yarn build-android
 
 workflows:
   build-and-test:

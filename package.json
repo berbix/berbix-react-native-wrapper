@@ -27,7 +27,8 @@
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
     "bootstrap": "yarn example && yarn && yarn pods",
-    "build-ios": "npx react-native run-ios --configuration Release"
+    "build-ios": "npx react-native run-ios --configuration Release",
+    "build-android": "npx react-native run-android --configuration Release"
   },
   "keywords": [
     "react-native",
