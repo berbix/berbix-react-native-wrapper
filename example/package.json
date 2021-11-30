@@ -7,7 +7,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "release-ios": "react-native run-ios --configuration Release",
-    "release-android": "react-native run-android --configuration Release",
+    "release-android": "react-native run-android --variant=Release",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
