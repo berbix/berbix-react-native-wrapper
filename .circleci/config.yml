@@ -1,9 +1,13 @@
 version: 2.1
 
 executors:
-  default:
+  node_docker:
     docker:
       - image: circleci/node:12
+    working_directory: ~/project
+  default:
+    macos:
+      xcode: 11.3.0
     working_directory: ~/project
 
 commands:
