@@ -87,7 +87,7 @@ jobs:
           name: Build iOS Example
           command: |
             cd example
-            yarn release-ios
+            npx run release-ios
 
   build-android-example:
     executor: android
@@ -97,7 +97,7 @@ jobs:
           name: Build Android Example
           command: |
             cd example
-            yarn release-android
+            npx run release-android
 
 workflows:
   build-and-test:
