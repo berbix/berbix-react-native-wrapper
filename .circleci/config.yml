@@ -71,14 +71,14 @@ jobs:
           path: coverage
           destination: coverage
 
-  build-package:
+  build-ios-example:
     executor: default
     steps:
       - attach_project
       - run:
-          name: Build package
+          name: Build iOS Example
           command: |
-            yarn prepare
+            yarn build-ios
 
 workflows:
   build-and-test:
@@ -93,6 +93,6 @@ workflows:
       - unit-tests:
           requires:
             - install-dependencies
-      - build-package:
+      - build-ios-example:
           requires:
             - install-dependencies
