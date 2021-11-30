@@ -1,11 +1,11 @@
 version: 2.1
 
 executors:
-  node_docker:
+  default:
     docker:
       - image: circleci/node:12
     working_directory: ~/project
-  default:
+  ios:
     macos:
       xcode: 11.3.0
     working_directory: ~/project
@@ -76,7 +76,7 @@ jobs:
           destination: coverage
 
   build-ios-example:
-    executor: default
+    executor: ios
     steps:
       - attach_project
       - run:
