@@ -69,6 +69,7 @@
     "preset": "react-native",
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules",
+      "<rootDir>/example/.yalc",
       "<rootDir>/lib/"
     ]
   },
