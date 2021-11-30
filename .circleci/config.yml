@@ -3,7 +3,7 @@ version: 2.1
 executors:
   default:
     docker:
-      - image: circleci/node:12
+      - image: cimg/node:12.22.7
     working_directory: ~/project
   ios:
     macos:
@@ -11,7 +11,7 @@ executors:
     working_directory: ~/project
   android:
     docker:
-      - image: circleci/android:api-30-node
+      - image: cimg/android:2021.10.2-node
     working_directory: ~/project
 
 commands:
