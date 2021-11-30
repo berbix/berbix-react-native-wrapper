@@ -86,7 +86,6 @@ jobs:
       - run:
           name: Build iOS Example
           command: |
-            yarn bootstrap
             yarn build-ios
 
   build-android-example:
@@ -96,7 +95,6 @@ jobs:
       - run:
           name: Build Android Example
           command: |
-            yarn bootstrap
             yarn build-android
 
 workflows:
@@ -113,5 +111,8 @@ workflows:
           requires:
             - install-dependencies
       - build-ios-example:
+          requires:
+            - install-dependencies
+      - build-android-example:
           requires:
             - install-dependencies
