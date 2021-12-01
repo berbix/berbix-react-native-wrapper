@@ -112,15 +112,12 @@ jobs:
       # Specify the "post-emulator-launch-assemble-command" command to override
       # the gradle command run, or set "wait-for-emulator" to false to disable
       # waiting for the emulator altogether.
-      - android/start-emulator:
+      - android/start-emulator-and-run-tests:
           avd-name: reactavd
           no-window: true
           restore-gradle-cache-prefix: v1a
-      - android/wait-for-emulator
-      - android/disable-animations
-      # Runs "./gradlew connectedDebugAndroidTest" by default.
-      # Specify the "test-command" parameter to customize the command run.
-      - android/run-tests
+          wait-for-emulator: true
+          disable-animations: true
       - android/save-gradle-cache:
           cache-prefix: v1a
       - run:
