@@ -106,6 +106,7 @@ jobs:
           avd-name: reactavd
           system-image: system-images;android-29;default;x86
           install: true
+          additional-args: --force
       # By default, after starting up the emulator, a cache will be restored,
       # "./gradlew assembleDebugAndroidTest" will be run and then a script
       # will be run to wait for the emulator to start up.
@@ -118,6 +119,7 @@ jobs:
           restore-gradle-cache-prefix: v1a
           wait-for-emulator: true
           disable-animations: true
+          post-emulator-launch-assemble-command: ''
       - android/save-gradle-cache:
           cache-prefix: v1a
       - run:
