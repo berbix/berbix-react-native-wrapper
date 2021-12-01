@@ -99,13 +99,12 @@ jobs:
           name: Create avd
           command: |
             export SYSTEM_IMAGES="system-images;android-29;default;x86"
-            sdkmanager --licenses
             sdkmanager --install "$SYSTEM_IMAGES"
             echo "no" | avdmanager --verbose create avd --force --name "generic_10" --package "$SYSTEM_IMAGES" --tag "default" --abi "x86"
       - run:
           name: Launch emulator
           command: |
-            emulator -avd test -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+            emulator -avd "generic_10" -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
           background: true
       - run:
           name: Disable emulator animations
