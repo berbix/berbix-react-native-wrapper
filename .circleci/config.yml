@@ -91,7 +91,7 @@ jobs:
           command: |
             cd example/ios
             pod install
-            xcodebuild -workspace example.xcworkspace -sdk iphonesimulator -configuration Release -scheme example DSTROOT="./"
+            DSTROOT="./" xcodebuild -workspace example.xcworkspace -sdk iphonesimulator -configuration Release -scheme example
       - store_artifacts:
           path: example.ipa
 
