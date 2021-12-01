@@ -98,7 +98,7 @@ jobs:
       - run:
           name: Create avd
           command: |
-            export SYSTEM_IMAGES="system-images;android-30;default;x86"
+            export SYSTEM_IMAGES="system-images;android-29;default;x86"
             sdkmanager --licenses
             sdkmanager --install "$SYSTEM_IMAGES"
             echo "no" | avdmanager --verbose create avd --force --name "generic_10" --package "$SYSTEM_IMAGES" --tag "default" --abi "x86"
