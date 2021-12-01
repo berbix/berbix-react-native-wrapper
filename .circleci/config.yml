@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  android: circleci/android@1.0.3
+
 executors:
   default:
     docker:
@@ -94,24 +97,31 @@ jobs:
     executor: android
     steps:
       - attach_project
-      - run:
-          name: Create avd
-          command: |
-            export SYSTEM_IMAGES="system-images;android-29;default;x86"
-            sdkmanager --install "$SYSTEM_IMAGES"
-            echo "no" | avdmanager --verbose create avd --force --name "generic_10" --package "$SYSTEM_IMAGES" --tag "default" --abi "x86"
-      - run:
-          name: Launch emulator
-          command: |
-            emulator -avd "generic_10" -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
-          background: true
+      - android/create-avd:
+          avd-name: myavd
+          system-image: system-images;android-29;default;x86
+          install: true
       - run:
           name: Disable emulator animations
           command: |
             adb shell settings put global window_animation_scale 0.0
             adb shell settings put global transition_animation_scale 0.0
             adb shell settings put global animator_duration_scale 0.0
-      - run: ./gradlew androidDependencies
+      # By default, after starting up the emulator, a cache will be restored,
+      # "./gradlew assembleDebugAndroidTest" will be run and then a script
+      # will be run to wait for the emulator to start up.
+      # Specify the "post-emulator-launch-assemble-command" command to override
+      # the gradle command run, or set "wait-for-emulator" to false to disable
+      # waiting for the emulator altogether.
+      - android/start-emulator:
+          avd-name: myavd
+          no-window: true
+          restore-gradle-cache-prefix: v1a
+      # Runs "./gradlew connectedDebugAndroidTest" by default.
+      # Specify the "test-command" parameter to customize the command run.
+      - android/run-tests
+      - android/save-gradle-cache:
+          cache-prefix: v1a
       - run:
           name: Build Android Example
           command: |
