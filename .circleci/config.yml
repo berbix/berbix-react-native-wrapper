@@ -97,6 +97,10 @@ jobs:
     executor: android
     steps:
       - attach_project
+      - run:
+          name: Move to Android directory
+          command: |
+            cd example
       - android/create-avd:
           avd-name: reactavd
           system-image: system-images;android-29;default;x86
@@ -121,7 +125,6 @@ jobs:
       - run:
           name: Build Android Example
           command: |
-            cd example
             npm run release-android
 
 workflows:
