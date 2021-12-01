@@ -102,10 +102,9 @@ jobs:
           name: Move to Android directory
           command: |
             cd example
-      - android/start-emulator-and-run-tests:
+      - android/start-emulator:
           avd-name: reactavd
           system-image: system-images;android-29;default;x86
-          run-tests-working-directory: example
           restore-gradle-cache-prefix: v1a
           wait-for-emulator: true
           post-emulator-launch-assemble-command: ''
