@@ -99,7 +99,7 @@ jobs:
           name: Create avd
           command: |
             export SYSTEM_IMAGES="system-images;android-30;default;x86"
-            echo "no" | avdmanager --verbose create avd -n test -k "$SYSTEM_IMAGES"
+            echo "no" | avdmanager --verbose create avd --force --name "generic_10" --package "system-images;android-30;default;x86" --tag "default" --abi "x86"
       - run:
           name: Launch emulator
           command: |
