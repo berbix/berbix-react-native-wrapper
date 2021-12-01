@@ -91,7 +91,9 @@ jobs:
           command: |
             cd example/ios
             pod install
-            xcodebuild -workspace example.xcworkspace -sdk iphonesimulator -configuration Release -scheme example
+            xcodebuild -workspace example.xcworkspace -sdk iphonesimulator -configuration Release -scheme example DSTROOT="./"
+      - store_artifacts:
+          path: example.ipa
 
   build-android-example:
     executor:
@@ -112,6 +114,8 @@ jobs:
           command: |
             cd example
             npm run release-android
+      - store_artifacts:
+          path: app-release.apk
 
 workflows:
   build-and-test:
