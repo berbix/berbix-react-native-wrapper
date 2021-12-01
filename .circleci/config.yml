@@ -104,11 +104,10 @@ jobs:
             cd example
       - android/start-emulator-and-run-tests:
           avd-name: reactavd
-          no-window: true
+          checkout: false
           system-image: system-images;android-29;default;x86
           restore-gradle-cache-prefix: v1a
           wait-for-emulator: true
-          disable-animations: true
           post-emulator-launch-assemble-command: ''
           save-gradle-cache: true
       - run:
