@@ -88,8 +88,7 @@ jobs:
           command: |
             cd example/ios
             pod install
-            cd ..
-            npm run release-ios
+            xcodebuild -workspace example.xcworkspace -sdk iphoneos -configuration Release -scheme example
 
   build-android-example:
     executor: android
