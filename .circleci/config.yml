@@ -104,7 +104,6 @@ jobs:
             cd example
       - android/start-emulator-and-run-tests:
           avd-name: reactavd
-          checkout: false
           system-image: system-images;android-29;default;x86
           run-tests-working-directory: example
           restore-gradle-cache-prefix: v1a
