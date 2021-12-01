@@ -98,15 +98,10 @@ jobs:
     steps:
       - attach_project
       - android/create-avd:
-          avd-name: myavd
+          avd-name: reactavd
           system-image: system-images;android-29;default;x86
           install: true
-      - run:
-          name: Disable emulator animations
-          command: |
-            adb shell settings put global window_animation_scale 0.0
-            adb shell settings put global transition_animation_scale 0.0
-            adb shell settings put global animator_duration_scale 0.0
+      - android/disable-animations
       # By default, after starting up the emulator, a cache will be restored,
       # "./gradlew assembleDebugAndroidTest" will be run and then a script
       # will be run to wait for the emulator to start up.
@@ -114,9 +109,10 @@ jobs:
       # the gradle command run, or set "wait-for-emulator" to false to disable
       # waiting for the emulator altogether.
       - android/start-emulator:
-          avd-name: myavd
+          avd-name: reactavd
           no-window: true
           restore-gradle-cache-prefix: v1a
+      - circle-android wait-for-boot
       # Runs "./gradlew connectedDebugAndroidTest" by default.
       # Specify the "test-command" parameter to customize the command run.
       - android/run-tests
