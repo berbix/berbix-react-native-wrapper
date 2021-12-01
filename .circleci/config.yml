@@ -112,7 +112,7 @@ jobs:
           avd-name: reactavd
           no-window: true
           restore-gradle-cache-prefix: v1a
-      - wait-for-emulator
+      - android/wait-for-emulator
       # Runs "./gradlew connectedDebugAndroidTest" by default.
       # Specify the "test-command" parameter to customize the command run.
       - android/run-tests
