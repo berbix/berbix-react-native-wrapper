@@ -94,7 +94,8 @@ jobs:
             xcodebuild -workspace example.xcworkspace -sdk iphonesimulator -configuration Release -scheme example
 
   build-android-example:
-    executor: android
+    executor:
+      name: android/android-machine
     steps:
       - attach_project
       - run:
