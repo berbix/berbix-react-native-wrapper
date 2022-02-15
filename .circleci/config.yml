@@ -1,9 +1,20 @@
 version: 2.1
 
+orbs:
+  android: circleci/android@1.0.3
+
 executors:
   default:
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:12.22.7
+    working_directory: ~/project
+  ios:
+    macos:
+      xcode: 13.0.0
+    working_directory: ~/project
+  android:
+    docker:
+      - image: cimg/android:2021.10.2-node
     working_directory: ~/project
 
 commands:
@@ -71,14 +82,40 @@ jobs:
           path: coverage
           destination: coverage
 
-  build-package:
-    executor: default
+  build-ios-example:
+    executor: ios
     steps:
       - attach_project
       - run:
-          name: Build package
+          name: Build iOS Example
           command: |
-            yarn prepare
+            cd example/ios
+            pod install
+            DSTROOT="./" xcodebuild -workspace example.xcworkspace -sdk iphonesimulator -configuration Release -scheme example
+      - store_artifacts:
+          path: example.ipa
+
+  build-android-example:
+    executor:
+      name: android/android-machine
+    steps:
+      - attach_project
+      - android/create-avd:
+          avd-name: reactavd
+          install: true
+          system-image: system-images;android-29;default;x86
+      - android/start-emulator:
+          avd-name: reactavd
+          restore-gradle-cache-prefix: v1a
+          wait-for-emulator: true
+          post-emulator-launch-assemble-command: ''
+      - run:
+          name: Build Android Example
+          command: |
+            cd example
+            npm run android-release-mode
+      - store_artifacts:
+          path: app-release.apk
 
 workflows:
   build-and-test:
@@ -90,9 +127,12 @@ workflows:
       - typescript:
           requires:
             - install-dependencies
-      - unit-tests:
+      # - unit-tests:
+      #     requires:
+      #       - install-dependencies
+      - build-ios-example:
           requires:
             - install-dependencies
-      - build-package:
+      - build-android-example:
           requires:
             - install-dependencies
