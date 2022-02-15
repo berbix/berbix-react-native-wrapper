@@ -70,17 +70,17 @@ jobs:
           command: |
             yarn typescript
 
-  # unit-tests:
-  #   executor: default
-  #   steps:
-  #     - attach_project
-  #     - run:
-  #         name: Run unit tests
-  #         command: |
-  #           yarn test --coverage
-  #     - store_artifacts:
-  #         path: coverage
-  #         destination: coverage
+  unit-tests:
+    executor: default
+    steps:
+      - attach_project
+      - run:
+          name: Run unit tests
+          command: |
+            yarn test --coverage
+      - store_artifacts:
+          path: coverage
+          destination: coverage
 
   build-ios-example:
     executor: ios
@@ -127,9 +127,9 @@ workflows:
       - typescript:
           requires:
             - install-dependencies
-      - unit-tests:
-          requires:
-            - install-dependencies
+      # - unit-tests:
+      #     requires:
+      #       - install-dependencies
       - build-ios-example:
           requires:
             - install-dependencies
