@@ -113,7 +113,7 @@ jobs:
           name: Build Android Example
           command: |
             cd example
-            npm run release-android
+            npm run android-release-mode
       - store_artifacts:
           path: app-release.apk
 
