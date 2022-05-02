@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  android: circleci/android@1.0.3
+  android: circleci/android@2.0.3
 
 executors:
   default:
@@ -14,7 +14,7 @@ executors:
     working_directory: ~/project
   android:
     docker:
-      - image: cimg/android:2021.10.2-node
+      - image: cimg/android:2022.04-node
     working_directory: ~/project
 
 commands:
@@ -98,21 +98,28 @@ jobs:
   build-android-example:
     executor:
       name: android/android-machine
+      resource-class: medium
+      tag: 2022.04.1
     steps:
+      - checkout
       - attach_project
       - android/create-avd:
           avd-name: reactavd
           install: true
-          system-image: system-images;android-32;default;x86
+          system-image: system-images;android-29;default;x86
       - android/start-emulator:
           avd-name: reactavd
           restore-gradle-cache-prefix: v1a
           wait-for-emulator: true
+          no-window: true
           post-emulator-launch-assemble-command: ''
+      - android/save-gradle-cache:
+          cache-prefix: v1a
       - run:
           name: Build Android Example
           command: |
             cd example
+            yarn install
             npm run android-release-mode
       - store_artifacts:
           path: app-release.apk
@@ -133,6 +140,4 @@ workflows:
       - build-ios-example:
           requires:
             - install-dependencies
-      - build-android-example:
-          requires:
-            - install-dependencies
+      - build-android-example
