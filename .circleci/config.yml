@@ -121,8 +121,8 @@ jobs:
             npm install -g react-native-cli
             yarn install --frozen-lockfile
             yarn install --cwd example --frozen-lockfile
-            cd example
-            react-native run-android
+            cd example/android
+            ./gradlew bundleRelease
       - store_artifacts:
           path: app-release.apk
 
