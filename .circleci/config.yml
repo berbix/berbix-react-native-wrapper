@@ -119,8 +119,8 @@ jobs:
           name: Build Android Example
           command: |
             cd example
-            yarn install
-            npm run android-release-mode
+            yarn install --frozen-lockfile
+            react-native run-android
       - store_artifacts:
           path: app-release.apk
 
