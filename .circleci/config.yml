@@ -118,8 +118,9 @@ jobs:
       - run:
           name: Build Android Example
           command: |
-            cd example
             yarn install --frozen-lockfile
+            yarn install --cwd example --frozen-lockfile
+            cd example
             react-native run-android
       - store_artifacts:
           path: app-release.apk
