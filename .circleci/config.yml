@@ -118,6 +118,7 @@ jobs:
       - run:
           name: Build Android Example
           command: |
+            npm install react-native
             yarn install --frozen-lockfile
             yarn install --cwd example --frozen-lockfile
             cd example
