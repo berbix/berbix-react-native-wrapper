@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 });
 
 const config = {
-  clientToken: 'test',
+  clientToken: 'test'
 };
 
 export default function App() {

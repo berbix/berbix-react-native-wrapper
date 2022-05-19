@@ -54,6 +54,9 @@ repositories {
   mavenCentral()
   jcenter()
   google()
+  maven {
+     url 'file://Users/nickadams/berbix/berbix-android/berbixverify/build/repo'
+    }
 
   maven {
     url "https://storage.googleapis.com/berbix-mobile-releases/repo"
@@ -132,5 +135,5 @@ dependencies {
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-  implementation 'com.berbix:berbixverify:3.0.6'
+  implementation 'com.berbix:berbixverify:3.0.7'
 }

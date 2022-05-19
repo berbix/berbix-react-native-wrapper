@@ -11,6 +11,9 @@ buildscript {
     repositories {
         google()
         jcenter()
+        flatDir {
+        dirs 'libs'
+      }
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.1.0")
@@ -34,6 +37,13 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://www.jitpack.io' }
+        flatDir {
+        dirs 'libs'
+      }
+
+      maven {
+       url 'file://Users/nickadams/berbix/berbix-android/berbixverify/build/repo'
+      }
 
       maven {
         url "https://storage.googleapis.com/berbix-mobile-releases/repo"
