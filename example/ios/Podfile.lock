@@ -1,8 +1,10 @@
 PODS:
-  - Berbix (3.0.1)
-  - berbix-react-native (3.0.2):
-    - Berbix (= 3.0.1)
+  - Berbix (3.1.0):
+    - BerbixAdvanced (= 0.2.0)
+  - berbix-react-native (3.0.9):
+    - Berbix (= 3.1.0)
     - React-Core
+  - BerbixAdvanced (0.2.0)
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.64.0)
@@ -309,7 +311,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/berbix/berbix-ios-spec.git:
     - Berbix
-  https://github.com/CocoaPods/Specs.git:
+    - BerbixAdvanced
+  trunk:
     - boost-for-react-native
 
 EXTERNAL SOURCES:
@@ -373,8 +376,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Berbix: 69b60f8d55ac506d5ce007cdba86abcf27f957d3
-  berbix-react-native: 344c954dd9002efb6a187090309bd97ffd5bbb12
+  Berbix: 4437194569af94e5b569cb84b3d8799daf80a221
+  berbix-react-native: 6470d621ad5370a85e751666e98d2d09e3698f34
+  BerbixAdvanced: dd2c799d913ae4e11a854e6713febc38b3493129
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 49cbe4b43e445b06bf29199b6ad2057649e4c8f5
@@ -405,6 +409,6 @@ SPEC CHECKSUMS:
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
 
-PODFILE CHECKSUM: de60ddb9cba5d09d2b5bbf28a9ea9dbfe5596e2b
+PODFILE CHECKSUM: 03583248fd8f467244207480f4c46dbf13cf2a97
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

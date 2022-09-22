@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "11.0" }
+  s.platforms    = { :ios => "12.0" }
   s.source       = { :git => "https://github.com/berbix/berbix-react-native-wrapper.git", :tag => "#{s.version}" }
   s.source       = { :git => 'https://github.com/berbix/berbix-ios-spec.git', :tag => s.version.to_s }
 
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React-Core"
-  s.dependency "Berbix", "3.0.1"
+  s.dependency "Berbix", "3.1.0"
 end
