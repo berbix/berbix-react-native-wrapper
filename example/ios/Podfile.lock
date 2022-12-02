@@ -1,6 +1,6 @@
 PODS:
   - Berbix (3.0.1)
-  - berbix-react-native (3.0.2):
+  - berbix-react-native (3.0.8):
     - Berbix (= 3.0.1)
     - React-Core
   - boost-for-react-native (1.63.0)
@@ -309,7 +309,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/berbix/berbix-ios-spec.git:
     - Berbix
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - boost-for-react-native
 
 EXTERNAL SOURCES:
@@ -374,7 +374,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Berbix: 69b60f8d55ac506d5ce007cdba86abcf27f957d3
-  berbix-react-native: 344c954dd9002efb6a187090309bd97ffd5bbb12
+  berbix-react-native: 23ff9970b410a9d51dc9073093b8408223eafaa9
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 49cbe4b43e445b06bf29199b6ad2057649e4c8f5
@@ -405,6 +405,6 @@ SPEC CHECKSUMS:
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
 
-PODFILE CHECKSUM: de60ddb9cba5d09d2b5bbf28a9ea9dbfe5596e2b
+PODFILE CHECKSUM: 31cb0060ac28592689de78fb9e7bd417ffd24f00
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
