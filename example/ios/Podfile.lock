@@ -1,8 +1,10 @@
 PODS:
-  - Berbix (3.0.1)
+  - Berbix (3.1.0):
+    - BerbixAdvanced (= 0.2.0)
   - berbix-react-native (3.0.8):
-    - Berbix (= 3.0.1)
+    - Berbix (= 3.1.0)
     - React-Core
+  - BerbixAdvanced (0.2.0)
   - boost (1.76.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.70.6)
@@ -288,7 +290,7 @@ PODS:
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - Berbix (= 3.0.1)
+  - Berbix (= 3.1.0)
   - berbix-react-native (from `../node_modules/berbix-react-native`)
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
@@ -327,6 +329,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/berbix/berbix-ios-spec.git:
     - Berbix
+    - BerbixAdvanced
   trunk:
     - fmt
 
@@ -399,8 +402,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Berbix: 69b60f8d55ac506d5ce007cdba86abcf27f957d3
-  berbix-react-native: 23ff9970b410a9d51dc9073093b8408223eafaa9
+  Berbix: 4437194569af94e5b569cb84b3d8799daf80a221
+  berbix-react-native: 4895332572b5a8db8ac51ceb89154517288a61db
+  BerbixAdvanced: dd2c799d913ae4e11a854e6713febc38b3493129
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 48289402952f4f7a4e235de70a9a590aa0b79ef4
@@ -435,6 +439,6 @@ SPEC CHECKSUMS:
   ReactCommon: 349be31adeecffc7986a0de875d7fb0dcf4e251c
   Yoga: 99caf8d5ab45e9d637ee6e0174ec16fbbb01bcfc
 
-PODFILE CHECKSUM: 4f480248d3fc6187c451d83dbdd0ee71e99ffddb
+PODFILE CHECKSUM: f1e6c2fc666ae7dc6b672012193728333fd016ac
 
 COCOAPODS: 1.11.3
