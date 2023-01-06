@@ -10,7 +10,7 @@ executors:
     working_directory: ~/project
   ios:
     macos:
-      xcode: 13.0.0
+      xcode: 14.1.0
     working_directory: ~/project
   android:
     docker:
