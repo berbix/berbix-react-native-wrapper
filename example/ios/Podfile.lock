@@ -1,7 +1,7 @@
 PODS:
   - Berbix (3.1.0):
     - BerbixAdvanced (= 0.2.0)
-  - berbix-react-native (3.0.8):
+  - berbix-react-native (3.1.0):
     - Berbix (= 3.1.0)
     - React-Core
   - BerbixAdvanced (0.2.0)
@@ -403,7 +403,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Berbix: 4437194569af94e5b569cb84b3d8799daf80a221
-  berbix-react-native: 4895332572b5a8db8ac51ceb89154517288a61db
+  berbix-react-native: 0efe6256d5f61cd23bb6656c2280f7da2d0d6db1
   BerbixAdvanced: dd2c799d913ae4e11a854e6713febc38b3493129
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
