@@ -63,7 +63,7 @@ static void InitializeFlipper(UIApplication *application) {
 #endif
 
   NSDictionary *initProps = [self prepareInitialProps];
-  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"BerbixLibraryExample", initProps);
+  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"example", initProps);
 
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
