@@ -7,7 +7,7 @@ target 'BerbixSdk' do
   source 'https://cdn.cocoapods.org/'
   source 'https://github.com/berbix/berbix-ios-spec.git'
 
-  pod 'Berbix', '3.1.0'
+  pod 'Berbix', '3.1.1'
   
   use_frameworks!
 
