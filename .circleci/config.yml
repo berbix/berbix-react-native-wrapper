@@ -6,11 +6,11 @@ orbs:
 executors:
   default:
     docker:
-      - image: cimg/node:12.22.7
+      - image: cimg/node:16.19.0
     working_directory: ~/project
   ios:
     macos:
-      xcode: 13.0.0
+      xcode: 14.1.0
     working_directory: ~/project
   android:
     docker:
