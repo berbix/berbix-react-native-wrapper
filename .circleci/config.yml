@@ -27,6 +27,9 @@ jobs:
   install-dependencies:
     executor: default
     steps:
+      # Update to the latest git version in light of CVE-2022-41903 and CVE-2022-41953
+      - run: 'sudo apt-get update'
+      - run: 'sudo apt-get install --only-upgrade git'
       - checkout
       - attach_project
       - restore_cache:
